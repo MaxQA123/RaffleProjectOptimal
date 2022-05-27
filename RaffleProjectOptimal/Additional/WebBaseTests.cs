@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.Additional
 {
-    public class BaseTests
+    public class WebBaseTests
     {
         public IWebDriver _webDriver;
 
