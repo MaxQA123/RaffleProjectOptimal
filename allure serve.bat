@@ -1,0 +1,1 @@
+allure serve C:\Users\Максим\source\repos\RaffleProjectOptimal\\allure-results

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.Additional
 {
-    public class WebBaseTests
+    public class BaseWeb
     {
         public IWebDriver _webDriver;
 
@@ -30,14 +30,6 @@ namespace RaffleProjectOptimal.Additional
         public void DoAfterEach()
         {
             _webDriver.Quit();
-        }
-
-        [SetUp]
-        public void DoBeforeEach()
-        {
-            _webDriver.Manage().Cookies.DeleteAllCookies();
-            _webDriver.Navigate().GoToUrl(EndPoints.homePage);
-            _webDriver.Manage().Window.Maximize();
         }
 
     }

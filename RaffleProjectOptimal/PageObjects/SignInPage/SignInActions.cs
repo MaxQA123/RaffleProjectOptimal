@@ -9,14 +9,19 @@ using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
-    public partial class SignIn : WebBaseTests
+    public partial class SignIn : BaseWeb
     {
         [Test]
-        public SignIn EnterData(string email, string password)
+        public SignIn EnterDataEmailPassword(string email, string password)
         {
+
+            WaitUntil.ShoudLocate(_webDriver, _emailInputField);
+
             EmailInputField.FindElement(_emailInputField).SendKeys(email);
             PasswordInputField.FindElement(_passwordInputField).SendKeys(password);
             SignInButton.FindElement(_signInButton).Click();
+
+            return this;
         }
 
     }
