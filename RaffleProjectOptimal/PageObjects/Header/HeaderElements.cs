@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RaffleProjectOptimal.PageObjects.Header
+namespace RaffleProjectOptimal.PageObjects
 {
     public partial class Header
     {
-        public IWebElement SignInButton => Browser._webDriver.FindElement(_SignInBtn);
-        public readonly static By _SignInBtn = By.XPath("//button[text() = 'Sign In']");
+        public IWebElement buttonSignIn => Browser._Driver.FindElement(_buttonSignIn);
+        public readonly static By _buttonSignIn = By.XPath("//button[text() = 'Sign In']");
     }
 }

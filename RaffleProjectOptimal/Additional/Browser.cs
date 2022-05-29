@@ -16,16 +16,15 @@ namespace RaffleProjectOptimal.Additional
     {
         public IWebDriver WebDriver { get; set; }
 
-        public static IWebDriver _webDriver;
+        private static IWebDriver _webDriver;
 
         public Browser(IWebDriver webDriver)
         {
-            _webDriver = webDriver;
+            WebDriver = webDriver;
         }
         public static void Initialize()
         {
             AllureConfigFilesHelper.CopyJsonConfigFile();
-
             new DriverManager().SetUpDriver(new ChromeConfig());
             _webDriver = new ChromeDriver();
             _Driver.Manage().Cookies.DeleteAllCookies();

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RaffleProjectOptimal.PageObjects.Header
+namespace RaffleProjectOptimal.PageObjects
 {
     public partial class Header
     {
         public Header OpenSignInPage()
         {
-            WaitUntil.ElementIsClicable(_SignInBtn);
-            _SignInBtn().Click;
+            WaitUntil.ElementIsClicable(buttonSignIn);
+            buttonSignIn.Click();
 
             return this;
         }

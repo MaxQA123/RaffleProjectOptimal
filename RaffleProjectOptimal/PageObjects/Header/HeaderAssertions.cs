@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RaffleProjectOptimal.PageObjects.Header
+namespace RaffleProjectOptimal.PageObjects
 {
-    public partial class HeaderAssertions
+    public partial class Header
     {
     }
 }
