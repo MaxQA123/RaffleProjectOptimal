@@ -25,6 +25,14 @@ namespace RaffleProjectOptimal.Tests
             Pages.SignIn
                 .VerifyIsSignIn();
         }
+
+        public void RegNewUserByEmail()
+        {
+            Pages.Header
+                .OpenSignUpPage();
+            Pages.SignUp
+                .EnterDataSignUp();
+        }
         
     }
 }

@@ -16,5 +16,12 @@ namespace RaffleProjectOptimal.PageObjects
 
             return this;
         }
+        public Header OpenSignUpPage()
+        {
+            WaitUntil.ElementIsClicable(ButtonSignUp);
+            buttonSignIn.Click();
+
+            return this;
+        }
     }
 }

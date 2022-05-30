@@ -8,6 +8,7 @@ using SeleniumExtras.PageObjects;
 using RaffleProjectOptimal.Additional;
 using RaffleProjectOptimal.PageObjects.SignInPage;
 using NUnit.Framework;
+using RaffleProjectOptimal.PageObjects.SignUpPage;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
@@ -23,5 +24,6 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         }
         public static Header Header => GetPage<Header>();
         public static SignIn SignIn => GetPage<SignIn>();
+        public static SignUp SignUp => GetPage<SignUp>();
     }
 }
