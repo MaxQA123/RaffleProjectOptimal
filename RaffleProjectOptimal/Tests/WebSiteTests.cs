@@ -15,12 +15,6 @@ namespace RaffleProjectOptimal.Tests
     public class WebSiteTests : TestBaseWeb
     {
         [Test]
-        [AllureTag("Regression")]
-        [AllureOwner("Artem Sukharevskyi")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Author("Artem", "qatester91311@gmail.com")]
-        [AllureSuite("Client")]
-        [AllureSubSuite("Login")]
 
         public void LogInByEmail()
         {
@@ -32,14 +26,3 @@ namespace RaffleProjectOptimal.Tests
         
     }
 }
-
-/*public void LoginByEmail()
-{
-    Pages.Header
-        .OpenSignInPage();
-    Pages.SignIn
-        .EnterLoginAndPass(Credentials.login, Credentials.password);
-    Pages.SignIn
-        .VerifyIsSignIn();
-
-}*/

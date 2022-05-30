@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
-    public partial class SignIn : BaseWeb
+    public partial class SignIn
     {
-        [AllureStep]
         public SignIn EnterDataEmailPassword(string email, string password)
         {
 
