@@ -24,7 +24,7 @@ namespace RaffleProjectOptimal.Additional
         }
         public static void ElementIsClicable(IWebElement element, int seconds = 10)
         {
-            new WebDriverWait(Browser._webDriver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+            new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
         }
     }
 }

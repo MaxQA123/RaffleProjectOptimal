@@ -10,7 +10,7 @@ namespace RaffleProjectOptimal.Additional
     public class TestBaseWeb : BaseWeb
     {
         [SetUp]
-        public void Initialize()
+        public void SetUp()
         {
             Browser._Driver.Navigate().GoToUrl(EndPoints.homePage);
         }

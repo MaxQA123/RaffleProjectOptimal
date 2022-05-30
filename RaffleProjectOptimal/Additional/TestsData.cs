@@ -8,7 +8,7 @@ namespace RaffleProjectOptimal.Additional
 {
     public class EndPoints
     {
-        public const string homePage = ("https://staging.rafflehouse.com/");
+        public const string homePage = "https://staging.rafflehouse.com/";
     }
     public class Credentials
     {

@@ -11,12 +11,11 @@ namespace RaffleProjectOptimal.Additional
 {
     public class BaseWeb
     {
-        public IWebDriver _webDriver;
 
         [OneTimeSetUp]
         public void DobeforeAllTheTests()
         {
-            _webDriver = new ChromeDriver();
+            Browser.Initialize();
         }
 
         [OneTimeTearDown]
@@ -29,7 +28,7 @@ namespace RaffleProjectOptimal.Additional
 
         public void DoAfterEach()
         {
-            _webDriver.Quit();
+            Browser.Quit();
         }
 
     }

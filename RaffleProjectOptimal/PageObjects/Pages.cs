@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SeleniumExtras.PageObjects;
 using RaffleProjectOptimal.Additional;
+using RaffleProjectOptimal.PageObjects.SignInPage;
 
-namespace RaffleProjectOptimal.PageObjects
+namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
     public class Pages
     {
@@ -20,5 +21,6 @@ namespace RaffleProjectOptimal.PageObjects
             return page;
         }
         public static Header Header => GetPage<Header>();
+        public static SignIn SignIn => GetPage<SignIn>();
     }
 }

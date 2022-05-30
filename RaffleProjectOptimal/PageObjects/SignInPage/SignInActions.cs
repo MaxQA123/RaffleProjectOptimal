@@ -11,15 +11,15 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
     public partial class SignIn : BaseWeb
     {
-        [Test]
+        [AllureStep]
         public SignIn EnterDataEmailPassword(string email, string password)
         {
 
-            WaitUntil.ShoudLocate(_webDriver, _emailInputField);
+            WaitUntil.ElementIsClicable(EmailInputField, 3);
 
-            EmailInputField.FindElement(_emailInputField).SendKeys(email);
-            PasswordInputField.FindElement(_passwordInputField).SendKeys(password);
-            SignInButton.FindElement(_signInButton).Click();
+            EmailInputField.SendKeys(email);
+            PasswordInputField.SendKeys(password);
+            SignInButton.Click();
 
             return this;
         }
