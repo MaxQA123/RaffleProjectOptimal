@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SeleniumExtras.PageObjects;
 using RaffleProjectOptimal.Additional;
 using RaffleProjectOptimal.PageObjects.SignInPage;
+using NUnit.Framework;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {

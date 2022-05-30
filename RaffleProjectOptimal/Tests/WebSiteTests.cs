@@ -22,6 +22,8 @@ namespace RaffleProjectOptimal.Tests
                 .OpenSignInPage();
             Pages.SignIn
                 .EnterDataEmailPassword(Credentials.email, Credentials.password);
+            Pages.SignIn
+                .VerifyIsSignIn();
         }
         
     }

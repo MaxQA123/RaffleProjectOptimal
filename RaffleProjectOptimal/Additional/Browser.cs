@@ -18,6 +18,11 @@ namespace RaffleProjectOptimal.Additional
 
         private static IWebDriver _webDriver;
 
+        internal static void FindElement(object actualUserNameLog)
+        {
+            throw new NotImplementedException();
+        }
+
         public Browser(IWebDriver webDriver)
         {
             WebDriver = webDriver;
