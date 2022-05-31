@@ -20,6 +20,12 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
 
             EmailInputField.SendKeys(email);
             PasswordInputField.SendKeys(password);
+            // SignInButton.Click();
+
+            return this;
+        }
+        public SignIn ClickSignInBtn()
+        {
             SignInButton.Click();
 
             return this;

@@ -4,10 +4,12 @@ using NUnit.Framework;
 using RaffleProjectOptimal.Additional;
 using RaffleProjectOptimal.PageObjects;
 using RaffleProjectOptimal.PageObjects.SignInPage;
+using RaffleProjectOptimal.PageObjects.SignUpPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.Tests
@@ -23,8 +25,13 @@ namespace RaffleProjectOptimal.Tests
             Pages.SignIn
                 .EnterDataEmailPassword(Credentials.email, Credentials.password);
             Pages.SignIn
+                .ClickSignInBtn();
+            Pages.SignIn
                 .VerifyIsSignIn();
+            Thread.Sleep(5000);
         }
+
+        [Test]
 
         public void RegNewUserByEmail()
         {
@@ -32,6 +39,12 @@ namespace RaffleProjectOptimal.Tests
                 .OpenSignUpPage();
             Pages.SignUp
                 .EnterDataSignUp();
+            string email = SignUp.GetEmail();
+            Pages.SignUp
+                .ClickSignUpBtn();
+            Pages.SignUp
+                .VerifyEmail(email);
+            Thread.Sleep(5000);
         }
         
     }

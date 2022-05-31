@@ -20,5 +20,12 @@ namespace RaffleProjectOptimal.Additional
             string stringBuilder = ti.ToTitleCase(firstLastName);
             return stringBuilder;
         }
+        public static string RandomString()
+        {
+            Random random = new Random();
+            const string chars = "qwertyuioplkjhgfdsazxcvbnm";
+            return new string(Enumerable.Repeat(chars, 5)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }

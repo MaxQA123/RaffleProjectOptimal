@@ -8,6 +8,6 @@ namespace RaffleProjectOptimal.Additional
 {
     public class NameDomen
     {
-        public static string XItroo = "@xitroo";
+        public static string XItroo = "@xitroo.com";
     }
 }

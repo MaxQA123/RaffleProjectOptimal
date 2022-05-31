@@ -8,5 +8,6 @@ namespace RaffleProjectOptimal.PageObjects
 {
     public partial class Header
     {
+
     }
 }

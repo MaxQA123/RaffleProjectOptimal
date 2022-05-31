@@ -14,7 +14,9 @@ namespace RaffleProjectOptimal.PageObjects
         public readonly static By _buttonSignIn = By.XPath("//button[text() = 'Sign In']");
         public IWebElement UserFirstNameBtn => Browser._Driver.FindElement(_userFirstNameBtn);
         public readonly static By _userFirstNameBtn = By.XPath("//*[@class='dropdownAccount ']/div[@class='header-drop-name']/span[1]");
-        public IWebElement ButtonSignUp => Browser._Driver.FindElement(_buttonsignUp);
-        public readonly static By _buttonsignUp = By.XPath("//a[@class='rafflebtn primary']");
+        public IWebElement ButtonSignUp => Browser._Driver.FindElement(_buttonSignUp);
+        public readonly static By _buttonSignUp = By.XPath("//a[text() = 'Sign up']");
+        public IWebElement LiveCompetionDrpDwn => Browser._Driver.FindElement(_liveCompetionDrpDwn);
+        public readonly static By _liveCompetionDrpDwn = By.XPath("//span[text() = 'Live Competitions']");
     }
 }
