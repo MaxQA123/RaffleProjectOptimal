@@ -24,6 +24,18 @@ namespace RaffleProjectOptimal.PageObjects
             return this;
         }
         public Header OpenDrpDwnLiveCompetions()
-        kljkjkkj
+        {
+            WaitUntil.ElementIsClicable(LiveCompetionDrpDwn);
+            LiveCompetionDrpDwn.Click();
+
+            return this;
+        }
+        public Header OpenDreamHomePageViaDrpDwnLiveComp()
+        {
+            WaitUntil.VisibilityOfAllElementsLocatedBy(_dreamHomeDrpDwnLiveComp);
+            DreamHomeDrpDwnLiveComp.Click();
+
+            return this;
+        }
     }
 }

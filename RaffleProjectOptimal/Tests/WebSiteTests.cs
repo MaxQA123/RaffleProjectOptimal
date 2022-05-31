@@ -46,6 +46,17 @@ namespace RaffleProjectOptimal.Tests
                 .VerifyEmail(email);
             Thread.Sleep(5000);
         }
+
+        [Test]
+
+        public void OpenDreamHomePageViaHeader()
+        {
+            Pages.Header
+                .OpenDrpDwnLiveCompetions();
+            Pages.Header
+                .OpenDreamHomePageViaDrpDwnLiveComp();
+            Thread.Sleep(5000);
+        }
         
     }
 }
