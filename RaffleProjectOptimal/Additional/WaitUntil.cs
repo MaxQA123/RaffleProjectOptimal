@@ -35,6 +35,10 @@ namespace RaffleProjectOptimal.Additional
         {
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.VisibilityOfAllElementsLocatedBy(element));
         }
-       
+        public static void WaitSomeInterval(int seconds = 2)
+        {
+            Task.Delay(TimeSpan.FromSeconds(seconds)).Wait();
+        }
+
     }
 }

@@ -9,6 +9,9 @@ using RaffleProjectOptimal.Additional;
 using RaffleProjectOptimal.PageObjects.SignInPage;
 using NUnit.Framework;
 using RaffleProjectOptimal.PageObjects.SignUpPage;
+using RaffleProjectOptimal.PageObjects.WeeklyPrizesPage;
+using RaffleProjectOptimal.PageObjects.DreamHomePage;
+using RaffleProjectOptimal.PageObjects.FixedOddsPage;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
@@ -16,7 +19,7 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
     {
         private static T GetPage<T>() where T : new()
         {
-            var page = new T ();
+            var page = new T();
             IWebDriver driver = Browser._Driver;
             PageFactory.InitElements(driver, page);
 
@@ -25,5 +28,8 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         public static Header Header => GetPage<Header>();
         public static SignIn SignIn => GetPage<SignIn>();
         public static SignUp SignUp => GetPage<SignUp>();
+        public static WeeklyPrizes WeeklyPrizes => GetPage<WeeklyPrizes>();
+        public static DreamHome DreamHome => GetPage<DreamHome>();
+        public static FixedOdds FixedOdds => GetPage<FixedOdds>();
     }
 }

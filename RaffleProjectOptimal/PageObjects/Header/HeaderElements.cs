@@ -20,7 +20,10 @@ namespace RaffleProjectOptimal.PageObjects
         public readonly static By _liveCompetionDrpDwn = By.XPath("//span[text() = 'Live Competitions']");
         public IWebElement DreamHomeDrpDwnLiveComp => Browser._Driver.FindElement(_dreamHomeDrpDwnLiveComp);
         public readonly static By _dreamHomeDrpDwnLiveComp = By.XPath("//a/span[contains(text(), 'Dream Home')]");
-        // //a/span[contains(text(), 'Dream Home')]
-        // //a[@href = '/dreamhome']
+        public IWebElement WeeklyPrizesDrpDwnLiveCamp => Browser._Driver.FindElement(_weeklyPrizesDrpDwnLiveCamp);
+        public readonly static By _weeklyPrizesDrpDwnLiveCamp = By.XPath("//a/span[contains(text(), 'Weekly Prizes')]");
+        public IWebElement FixedOddsDrpDwnLiveComp => Browser._Driver.FindElement(_fixedOddsDrpDwnLiveComp);
+        public readonly static By _fixedOddsDrpDwnLiveComp = By.XPath("//a/span[contains(text(), 'Fixed Odds')]");
+        
     }
 }

@@ -37,5 +37,19 @@ namespace RaffleProjectOptimal.PageObjects
 
             return this;
         }
+        public Header OpenWeeklyPrizesPageViaDrpDwnLiveComp()
+        {
+            WaitUntil.VisibilityOfAllElementsLocatedBy(_weeklyPrizesDrpDwnLiveCamp);
+            WeeklyPrizesDrpDwnLiveCamp.Click();
+
+            return this;
+        }
+        public Header OpenFixedOddsPageViaDrpDwnLiveComp()
+        {
+            WaitUntil.VisibilityOfAllElementsLocatedBy(_fixedOddsDrpDwnLiveComp);
+            FixedOddsDrpDwnLiveComp.Click();
+
+            return this;
+        }
     }
 }

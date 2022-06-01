@@ -49,14 +49,45 @@ namespace RaffleProjectOptimal.Tests
 
         [Test]
 
-        public void OpenDreamHomePageViaHeader()
+        public void OpenDreamHomePrizeViaHeader()
         {
             Pages.Header
                 .OpenDrpDwnLiveCompetions();
             Pages.Header
                 .OpenDreamHomePageViaDrpDwnLiveComp();
+            Pages.DreamHome
+               .SelectDreamHomePrize("Find out more");
             Thread.Sleep(5000);
         }
-        
+
+        [Test]
+
+        public void OpenWeeklyPrizeViaHeader()
+        {
+            Pages.Header
+                .OpenDrpDwnLiveCompetions();
+            Pages.Header
+                .OpenWeeklyPrizesPageViaDrpDwnLiveComp();
+            Pages.WeeklyPrizes
+                .ClickButtonOkPopWndw();
+            Pages.WeeklyPrizes
+                .SelectWeeklyPrize("2 Night Yoga Retreat");
+            Thread.Sleep(5000);
+        }
+
+        [Test]
+
+        public void OpenFixedOddsPrize()
+        {
+            Pages.Header
+                .OpenDrpDwnLiveCompetions();
+            Pages.Header
+                .OpenFixedOddsPageViaDrpDwnLiveComp();
+            Pages.FixedOdds
+                .SelectFixedOddsprize("enter");
+            Thread.Sleep(5000);
+        }
+
+
     }
 }
