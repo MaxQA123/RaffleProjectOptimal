@@ -16,6 +16,13 @@ namespace RaffleProjectOptimal.PageObjects.DreamHomePage
 
             return this;
         }
+        public DreamHome ClickEnterBtnGotItPopWndw()
+        {
+            WaitUntil.ElementIsClicable(EnterButtonGotItPoUpWndw);
+            EnterButtonGotItPoUpWndw.Click();
+
+            return this;
+        }
 
     }
 }

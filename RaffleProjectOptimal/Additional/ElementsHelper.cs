@@ -14,7 +14,7 @@ namespace RaffleProjectOptimal.Additional
         {
             WaitUntil.WaitSomeInterval(2);
 
-            IWebElement enterButton = Browser._Driver.FindElement(By.XPath($"//h3[text() = '{titlePrize}']/ancestor::article/div/button"));
+            IWebElement enterButton = Browser._Driver.FindElement(By.XPath($"//h3[contains(text(), '{titlePrize}')]/ancestor::article/div/button"));
 
             enterButton.SendKeys("");
             WaitUntil.WaitSomeInterval(2);

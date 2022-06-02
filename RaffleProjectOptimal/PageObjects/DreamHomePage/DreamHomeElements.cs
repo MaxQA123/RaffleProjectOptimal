@@ -12,5 +12,7 @@ namespace RaffleProjectOptimal.PageObjects.DreamHomePage
     {
         public IWebElement EnterButtonDreamHome => Browser._Driver.FindElement(_enterButtonDreamHome);
         public readonly static By _enterButtonDreamHome = By.XPath("//div[@class = 'dreamhome-card-footer']//button[@type = 'button']");
+        public IWebElement EnterButtonGotItPoUpWndw => Browser._Driver.FindElement(_enterButtonGotItPoUpWndw);
+        public readonly static By _enterButtonGotItPoUpWndw = By.XPath("//button[text() = 'Got it']");
     }
 }

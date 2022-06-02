@@ -20,6 +20,8 @@ namespace RaffleProjectOptimal.Tests
 
         public void LogInByEmail()
         {
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
             Pages.Header
                 .OpenSignInPage();
             Pages.SignIn
@@ -35,6 +37,8 @@ namespace RaffleProjectOptimal.Tests
 
         public void RegNewUserByEmail()
         {
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
             Pages.Header
                 .OpenSignUpPage();
             Pages.SignUp
@@ -51,7 +55,9 @@ namespace RaffleProjectOptimal.Tests
 
         public void OpenDreamHomePrizeViaHeader()
         {
-            Pages.Header
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
+;            Pages.Header
                 .OpenDrpDwnLiveCompetions();
             Pages.Header
                 .OpenDreamHomePageViaDrpDwnLiveComp();
@@ -64,6 +70,8 @@ namespace RaffleProjectOptimal.Tests
 
         public void OpenWeeklyPrizeViaHeader()
         {
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
             Pages.Header
                 .OpenDrpDwnLiveCompetions();
             Pages.Header
@@ -77,8 +85,10 @@ namespace RaffleProjectOptimal.Tests
 
         [Test]
 
-        public void OpenFixedOddsPrize()
+        public void OpenFixedOddsPrizeViaHeader()
         {
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
             Pages.Header
                 .OpenDrpDwnLiveCompetions();
             Pages.Header
@@ -88,6 +98,35 @@ namespace RaffleProjectOptimal.Tests
             Thread.Sleep(5000);
         }
 
+        [Test]
 
+        public void BuyTicketsWeeklyPrize()
+        {
+            Pages.DreamHome
+                .ClickEnterBtnGotItPopWndw();
+            Pages.Header
+                .OpenSignInPage();
+            Pages.SignIn
+                .EnterDataEmailPassword(Credentials.email, Credentials.password);
+            Pages.SignIn
+                .ClickSignInBtn();
+            Pages.SignIn
+                .VerifyIsSignIn();
+            Pages.Header
+                .OpenDrpDwnLiveCompetions();
+            Pages.Header
+                .OpenWeeklyPrizesPageViaDrpDwnLiveComp();
+            WaitUntil.WaitSomeInterval(5);
+            Pages.WeeklyPrizes
+                .ClickButtonOkPopWndw();
+            Pages.WeeklyPrizes
+               .SelectWeeklyPrize("2 Night Yoga Retreat");
+            Pages.WeeklyPrizes
+                 .ClickSldrArrowRght();
+            Pages.WeeklyPrizes
+                .ClickSldrArrowLft();
+            Thread.Sleep(5000);
+        }
+   
     }
 }

@@ -11,17 +11,11 @@ namespace RaffleProjectOptimal.Additional
 {
     public class WaitUntil
     {
-        public static void ShoudLocate(IWebDriver webDriver, By location)
+        public static void ShouldLocate(By location)
         {
-            try
-            {
-                new WebDriverWait(webDriver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(location));
-            }
-            catch(WebDriverTimeoutException ex)
-            {
-                throw new NotFoundException($"Cannot find out that app in specific location {location}", ex);
-            }
+            new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(location));
         }
+        
         public static void ElementIsClicable(IWebElement element, int seconds = 10)
         {
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));

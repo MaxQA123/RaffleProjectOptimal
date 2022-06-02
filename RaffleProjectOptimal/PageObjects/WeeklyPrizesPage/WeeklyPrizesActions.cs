@@ -24,5 +24,28 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
 
             return this;
         }
+        public WeeklyPrizes ClickSldrArrowRght()
+        {
+            WaitUntil.ElementIsClicable(ArrowRightSldrCardPrizeWeekly, 5);
+            ArrowRightSldrCardPrizeWeekly.Click();
+
+            return this;
+        }
+        public WeeklyPrizes ClickSldrArrowLft()
+        {
+            WaitUntil.ElementIsClicable(ArrowLeftSldrCardPrizeWeekl, 5);
+            ArrowLeftSldrCardPrizeWeekl.Click();
+
+            return this;
+        }
+        public WeeklyPrizes SelectVart()
+        {
+            WaitUntil.ElementIsClicable(EnterButtonWeeklyCard, 5);
+            EnterButtonWeeklyCard.SendKeys("");
+            WaitUntil.WaitSomeInterval(5);
+            EnterButtonWeeklyCard.Click();
+
+            return this;
+        }
     }
 }
