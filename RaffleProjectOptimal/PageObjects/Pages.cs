@@ -14,6 +14,7 @@ using RaffleProjectOptimal.PageObjects.DreamHomePage;
 using RaffleProjectOptimal.PageObjects.FixedOddsPage;
 using RaffleProjectOptimal.PageObjects.TicketSelectorPage;
 using RaffleProjectOptimal.PageObjects.BasketPage;
+using RaffleProjectOptimal.PageObjects.CheckoutPage;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
@@ -35,5 +36,6 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         public static FixedOdds FixedOdds => GetPage<FixedOdds>();
         public static TicketSelector TicketSelector => GetPage<TicketSelector>();
         public static Basket Basket => GetPage<Basket>();
+        public static Checkout Checkout => GetPage<Checkout>();
     }
 }

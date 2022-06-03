@@ -140,6 +140,8 @@ namespace RaffleProjectOptimal.Tests
                 .ClickAddToBasketButton();
             Pages.Basket
                 .ClickButtonCheckoutNowOnBasket();
+            Pages.Checkout
+                .InputCardNumberCheckout(Credentials.cardNumber, Credentials.expirationDate, Credentials.cvv);
             Thread.Sleep(5000);
         }
    

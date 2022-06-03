@@ -20,8 +20,10 @@ namespace RaffleProjectOptimal.PageObjects.BasketPage
 
         public Basket ClickButtonCheckoutNowOnBasket()
         {
-            WaitUntil.WaitSomeInterval(3);
+            WaitUntil.WaitSomeInterval(1);
             WaitUntil.ElementIsClicable(ButtonCheckoutNowOnBasket);
+            ButtonCheckoutNowOnBasket.SendKeys("");
+            WaitUntil.WaitSomeInterval(3);
             ButtonCheckoutNowOnBasket.Click();
 
             return this;

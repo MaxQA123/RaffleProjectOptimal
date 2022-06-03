@@ -20,5 +20,8 @@ namespace RaffleProjectOptimal.Additional
     {
         public const string email = ("maxqatesting390@gmail.com");
         public const string password = ("Wsx987123");
+        public const string cardNumber = ("4242424242424242");
+        public const string expirationDate = ("1223");
+        public const string cvv = ("100");
     }
 }
