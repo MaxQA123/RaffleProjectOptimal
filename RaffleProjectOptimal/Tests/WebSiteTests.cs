@@ -116,7 +116,6 @@ namespace RaffleProjectOptimal.Tests
                 .OpenDrpDwnLiveCompetions();
             Pages.Header
                 .OpenWeeklyPrizesPageViaDrpDwnLiveComp();
-            WaitUntil.WaitSomeInterval(5);
             Pages.WeeklyPrizes
                 .ClickButtonOkPopWndw();
             Pages.WeeklyPrizes

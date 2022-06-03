@@ -20,15 +20,18 @@ namespace RaffleProjectOptimal.Additional
         {
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
         }
+
         public static void ElementVisibleAndClickable(By element, int seconds = 10)
         {
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(element));
         }
+
         public static void VisibilityOfAllElementsLocatedBy(By element, int seconds = 10)
         {
             new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.VisibilityOfAllElementsLocatedBy(element));
         }
+
         public static void WaitSomeInterval(int seconds = 2)
         {
             Task.Delay(TimeSpan.FromSeconds(seconds)).Wait();

@@ -11,6 +11,7 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
     {
         public WeeklyPrizes ClickButtonOkPopWndw()
         {
+            WaitUntil.WaitSomeInterval(5);
             WaitUntil.ElementIsClicable(PopWndwOkButton, 5);
             PopWndwOkButton.Click();
 
@@ -26,6 +27,7 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
         }
         public WeeklyPrizes ClickSldrArrowRght()
         {
+            WaitUntil.WaitSomeInterval(3);
             WaitUntil.ElementIsClicable(ArrowRightSldrCardPrizeWeekly, 5);
             ArrowRightSldrCardPrizeWeekly.Click();
 
@@ -33,19 +35,20 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
         }
         public WeeklyPrizes ClickSldrArrowLft()
         {
+            WaitUntil.WaitSomeInterval(1);
             WaitUntil.ElementIsClicable(ArrowLeftSldrCardPrizeWeekl, 5);
             ArrowLeftSldrCardPrizeWeekl.Click();
 
             return this;
         }
-        public WeeklyPrizes SelectVart()
-        {
-            WaitUntil.ElementIsClicable(EnterButtonWeeklyCard, 5);
-            EnterButtonWeeklyCard.SendKeys("");
-            WaitUntil.WaitSomeInterval(5);
-            EnterButtonWeeklyCard.Click();
+        //public WeeklyPrizes SelectVart()
+        //{
+        //    WaitUntil.ElementIsClicable(EnterButtonWeeklyCard, 1);
+        //    EnterButtonWeeklyCard.SendKeys("");
+        //    WaitUntil.WaitSomeInterval(5);
+        //    EnterButtonWeeklyCard.Click();
 
-            return this;
-        }
+        //    return this;
+        //}
     }
 }

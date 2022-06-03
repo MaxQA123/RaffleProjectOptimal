@@ -12,10 +12,11 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
     {
         public IWebElement PopWndwOkButton => Browser._Driver.FindElement(_popWndwOkButton);
         public readonly static By _popWndwOkButton = By.XPath("//div[@class = 'ReactModal__Content ReactModal__Content--after-open freeToWinModalWrapper']//button[text() = 'OK']");
-        public IWebElement WeeklyCardPrizeTitle => Browser._Driver.FindElement(_weeklyCardPrizeTitle);
-        public readonly static By _weeklyCardPrizeTitle = By.XPath("//h3[text() = 'Gordon Ramsay Experience']");
         public IWebElement EnterButtonWeeklyCard => Browser._Driver.FindElement(_enterButtonWeeklyCard);
         public readonly static By _enterButtonWeeklyCard = By.XPath("//*/article/div[1]/button");
+        
+        
+        // Page CardWeeklyPrizes
         public IWebElement ArrowRightSldrCardPrizeWeekly => Browser._Driver.FindElement(_arrowRightSldrCardPrizeWeekly);
         public readonly static By _arrowRightSldrCardPrizeWeekly = By.XPath("//div[@class = 'mat-carousel-container']/button[2]");
         public IWebElement ArrowLeftSldrCardPrizeWeekl => Browser._Driver.FindElement(_arrowLeftSldrCardPrizeWeekly);
