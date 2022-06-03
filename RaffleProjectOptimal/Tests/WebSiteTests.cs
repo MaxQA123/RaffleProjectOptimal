@@ -124,6 +124,22 @@ namespace RaffleProjectOptimal.Tests
                  .ClickSldrArrowRght();
             Pages.WeeklyPrizes
                 .ClickSldrArrowLft();
+            Pages.WeeklyPrizes
+                .ClcikButtonEnterNow();
+            Pages.TicketSelector
+                .SelectAmountPlusTwntFvTicketForWeekly();
+            Pages.TicketSelector
+                .SelectAmountMinTenTicketForWeekly();
+            Pages.TicketSelector
+                .ClickAddToBasketButton();
+            Pages.Basket
+                .ClickChangeAmountTicketsInBasket();
+            Pages.TicketSelector
+                .SelectAmountPlusOneTicketForWeekly();
+            Pages.TicketSelector
+                .ClickAddToBasketButton();
+            Pages.Basket
+                .ClickButtonCheckoutNowOnBasket();
             Thread.Sleep(5000);
         }
    

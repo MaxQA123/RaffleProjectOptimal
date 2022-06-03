@@ -50,5 +50,13 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
 
         //    return this;
         //}
+        // Page CardWeeklyPrizes
+        public WeeklyPrizes ClcikButtonEnterNow()
+        {
+            WaitUntil.ElementIsClicable(EnterButtonEnterNowWeekly, 5);
+            EnterButtonEnterNowWeekly.Click();
+
+            return this;
+        }
     }
 }

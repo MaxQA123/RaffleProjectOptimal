@@ -37,5 +37,10 @@ namespace RaffleProjectOptimal.Additional
             Task.Delay(TimeSpan.FromSeconds(seconds)).Wait();
         }
 
+        public static void ElementVisible(By element, int seconds = 10)
+        {
+            new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementIsVisible(element));
+        }
+
     }
 }

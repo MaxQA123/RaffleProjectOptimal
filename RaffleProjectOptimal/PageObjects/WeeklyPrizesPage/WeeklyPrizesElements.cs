@@ -21,5 +21,7 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
         public readonly static By _arrowRightSldrCardPrizeWeekly = By.XPath("//div[@class = 'mat-carousel-container']/button[2]");
         public IWebElement ArrowLeftSldrCardPrizeWeekl => Browser._Driver.FindElement(_arrowLeftSldrCardPrizeWeekly);
         public readonly static By _arrowLeftSldrCardPrizeWeekly = By.XPath("//div[@class = 'mat-carousel-container']/button[1]");
+        public IWebElement EnterButtonEnterNowWeekly => Browser._Driver.FindElement(_enterButtonEnterNowWeekly);
+        public readonly static By _enterButtonEnterNowWeekly = By.XPath("//button[@class = 'enter-now__button']/span");
     }
 }
