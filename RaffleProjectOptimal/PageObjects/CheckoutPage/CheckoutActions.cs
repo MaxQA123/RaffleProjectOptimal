@@ -1,4 +1,5 @@
-﻿using RaffleProjectOptimal.Additional;
+﻿using OpenQA.Selenium;
+using RaffleProjectOptimal.Additional;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,36 @@ namespace RaffleProjectOptimal.PageObjects.CheckoutPage
         {
             WaitUntil.WaitSomeInterval(10);
             Browser._Driver.SwitchTo().Frame(Iframe);
-            WaitUntil.ElementIsClicable(FieldInputCardNumber, 5);
+            WaitUntil.ElementIsClicable(FieldInputCardNumber, 60);
             FieldInputCardNumber.SendKeys(cardnumber);
             FieldExpirationDate.SendKeys(expirationdate);
             FieldInputCvv.SendKeys(cvv);
+            WaitUntil.WaitSomeInterval(1);
+            Browser._Driver.SwitchTo().DefaultContent();
+
+            return this;
+        }
+
+        public Checkout ScrollToCheckBoxIAmCheckout()
+        {
+            Scroll.ScrollBottom(CheckBoxIAmCheckout);
+
+            return this;
+        }
+
+        public Checkout ClickCheckBoxIAmCheckout()
+        {
+            WaitUntil.WaitSomeInterval(3);
+            CheckBoxIAmCheckout.Click();
+
+            return this;
+        }
+
+        public Checkout ClickBtnCompleteOrderChcktPg()
+        {
+            WaitUntil.WaitSomeInterval(1);
+            //WaitUntil.ElementIsClicable(ButtonCompleteOrderChcktPg, 60);
+            ButtonCompleteOrderChcktPg.Click();
 
             return this;
         }

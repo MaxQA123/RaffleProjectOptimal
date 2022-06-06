@@ -28,7 +28,7 @@ namespace RaffleProjectOptimal.PageObjects.WeeklyPrizesPage
         public WeeklyPrizes ClickSldrArrowRght()
         {
             WaitUntil.WaitSomeInterval(3);
-            WaitUntil.ElementIsClicable(ArrowRightSldrCardPrizeWeekly, 5);
+            WaitUntil.ElementIsClicable(ArrowRightSldrCardPrizeWeekly, 60);
             ArrowRightSldrCardPrizeWeekly.Click();
 
             return this;

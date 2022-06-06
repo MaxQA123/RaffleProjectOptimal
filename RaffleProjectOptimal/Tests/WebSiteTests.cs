@@ -142,6 +142,12 @@ namespace RaffleProjectOptimal.Tests
                 .ClickButtonCheckoutNowOnBasket();
             Pages.Checkout
                 .InputCardNumberCheckout(Credentials.cardNumber, Credentials.expirationDate, Credentials.cvv);
+            Pages.Checkout
+                .ScrollToCheckBoxIAmCheckout();
+            Pages.Checkout
+                .ClickCheckBoxIAmCheckout();
+            Pages.Checkout
+                .ClickBtnCompleteOrderChcktPg();
             Thread.Sleep(5000);
         }
    

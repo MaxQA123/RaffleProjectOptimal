@@ -37,5 +37,6 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         public static TicketSelector TicketSelector => GetPage<TicketSelector>();
         public static Basket Basket => GetPage<Basket>();
         public static Checkout Checkout => GetPage<Checkout>();
+        public static Scroll Scroll => GetPage<Scroll>();
     }
 }
