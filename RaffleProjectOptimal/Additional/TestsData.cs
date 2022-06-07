@@ -15,6 +15,8 @@ namespace RaffleProjectOptimal.Additional
         public const string WeeklyPrizes = "https://staging.rafflehouse.com/lifestyleprizes";
         public const string FixedOdds = "https://staging.rafflehouse.com/fixedodds";
         public const string MyDetailsPage = "https://staging.rafflehouse.com/profile/user-info";
+
+        public const string CmsLogInPage = "https://admin-staging.rafflehouse.com/#/login";
     }
     public class Credentials
     {
@@ -23,5 +25,14 @@ namespace RaffleProjectOptimal.Additional
         public const string cardNumber = ("4242424242424242");
         public const string expirationDate = ("1223");
         public const string cvv = ("100");
+        public const string cmsemail = ("bennospencer@gmail.com");
+        public const string cmspassword = ("1289Raffle@!CMS");
     }
+    //public class UploadedImages
+    //{
+    //    public const string RaffleBathroom = $"\\UploadImages\\RaffleBathroom.jfif";
+    //    public const string RaffleBedroom = $"\\UploadImages\\RaffleBedroom.jfif";
+    //    public const string RaffleFloorPlan = $"\\UploadImages\\RaffleFloorPlan.jpg";
+    //    public const string RaffleOutspace = $"\\UploadImages\\RaffleOutspace.jfif";
+    //}
 }

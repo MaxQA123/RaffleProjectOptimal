@@ -15,6 +15,12 @@ using RaffleProjectOptimal.PageObjects.FixedOddsPage;
 using RaffleProjectOptimal.PageObjects.TicketSelectorPage;
 using RaffleProjectOptimal.PageObjects.BasketPage;
 using RaffleProjectOptimal.PageObjects.CheckoutPage;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsLogInPage;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsHomePage;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsSideBar;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsPersonalDetailsPage;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsHeader;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
@@ -38,5 +44,10 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         public static Basket Basket => GetPage<Basket>();
         public static Checkout Checkout => GetPage<Checkout>();
         public static Scroll Scroll => GetPage<Scroll>();
+        public static CmsLogIn CmsLogIn => GetPage<CmsLogIn>();
+        public static CmsSideBar CmsSideBar => GetPage<CmsSideBar>();
+        public static CmsPersonalDetailsPage CmsPersonalDetailsPage => GetPage<CmsPersonalDetailsPage>();
+        public static CmsHeader CmsHeader => GetPage<CmsHeader>();
+        public static CmsFixedOddsPage CmsFixedOddsPage => GetPage<CmsFixedOddsPage>();
     }
 }
