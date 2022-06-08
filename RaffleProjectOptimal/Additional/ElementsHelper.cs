@@ -40,5 +40,10 @@ namespace RaffleProjectOptimal.Additional
             WaitUntil.WaitSomeInterval(2);
             enterButton.Click();
         }
+        public static void InputFunction(string startDate)
+        {
+            WaitUntil.WaitSomeInterval(2);
+
+        }
     }
 }

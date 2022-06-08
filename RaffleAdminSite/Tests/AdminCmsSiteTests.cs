@@ -48,6 +48,10 @@ namespace RaffleAdminSite.Tests
                 .EnterSubtitle();
             Pages.CmsFixedOddsPage
                 .EnterDescription();
+            Pages.CmsFixedOddsPage
+                .SwitchingButtonActive();
+            Pages.CmsFixedOddsPage
+                .SetStartDate();
             Thread.Sleep(5000);
         }
 

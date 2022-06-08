@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using RimuTec.Faker;
 
 namespace RaffleProjectOptimal.PageObjects.SignUpPage
 {
@@ -14,8 +15,8 @@ namespace RaffleProjectOptimal.PageObjects.SignUpPage
         {
             WaitUntil.ElementIsClicable(FirstNameInputField, 8);
 
-            FirstNameInputField.SendKeys(RandomGenerateData.RandomStringForFirstLastName(10));
-            LastNameInputField.SendKeys(RandomGenerateData.RandomStringForFirstLastName(10));
+            FirstNameInputField.SendKeys(Name.FirstName());
+            LastNameInputField.SendKeys(Name.LastName());
             EmailInputField.Clear();
             EmailInputField.SendKeys(RandomGenerateData.RandomString() + NameDomen.XItroo);
             PhoneNumInutField.SendKeys("1132345631");

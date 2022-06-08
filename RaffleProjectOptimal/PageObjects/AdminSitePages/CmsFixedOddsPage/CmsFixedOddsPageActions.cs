@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using NBitcoin;
+using OpenQA.Selenium;
 using RaffleProjectOptimal.Additional;
+using RimuTec.Faker;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,6 +48,32 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
         {
             WaitUntil.ShouldLocate(By.XPath("//div[@class = 'ql-editor ql-blank']"));
             AddDescriptionInputFieldFixed.SendKeys(RandomGenerateData.RandomStringDescription(100));
+
+            return this;
+        }
+        public CmsFixedOddsPage SwitchingButtonActive()
+        {
+            WaitUntil.ElementIsClicable(SwitchButtonActiveFixed, 3);
+            SwitchButtonActiveFixed.Click();
+
+            return this;
+        }
+        public CmsFixedOddsPage SetStartDate()
+        {
+            WaitUntil.ElementIsClicable(StartDateInputDay, 3);
+            StartDateInputDay.Clear();
+            StartDateInputDay.SendKeys("15");
+            StartDateInputMonth.Clear();
+            StartDateInputMonth.SendKeys("5");
+            StartDateInputYear.Clear();
+            StartDateInputYear.SendKeys("2022");
+            StartDateInputHour.Clear();
+            StartDateInputHour.SendKeys("30");
+            StartDateInputMinute.Clear();
+            StartDateInputMinute.SendKeys("49");
+            StartDateInputSecond.Clear();
+            StartDateInputSecond.SendKeys("17");
+            SelectStartDateAmPm.SendKeys(Keys.ArrowDown);
 
             return this;
         }
