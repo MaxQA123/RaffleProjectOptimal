@@ -31,7 +31,7 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
         public CmsFixedOddsPage UploadImages()
         {
             WaitUntil.WaitSomeInterval(5);
-            DesktopUploadImagesInput.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\")) + UploadedImages.DhRaffleHouse);
+            DesktopUploadImagesInput.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\")) + UploadedImages.DhRaffleHouse);
             MobileUploadImagesInput.SendKeys(Browser.RootPath() + UploadedImages.DhRaffleHouse);
 
             return this;
