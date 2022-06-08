@@ -14,6 +14,8 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsSideBar
         {
             WaitUntil.ShouldLocate(By.XPath("//div[@class = 'menu-wrap']/li[1]//span[@class = 'MuiTypography-root link MuiTypography-colorTextSecondary']"));
             PrizeManagementButtonDrp.Click();
+
+            WaitUntil.WaitSomeInterval(3);
             FixedOddsButton.Click();
 
             return this;

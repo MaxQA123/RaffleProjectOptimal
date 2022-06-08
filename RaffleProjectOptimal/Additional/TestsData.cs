@@ -28,6 +28,11 @@ namespace RaffleProjectOptimal.Additional
         public const string cmsemail = ("bennospencer@gmail.com");
         public const string cmspassword = ("1289Raffle@!CMS");
     }
+    public class UploadedImages
+    {
+        public const string DhRaffleHouse = $"\\UploadImages\\DhRaffleHouse.jpg";
+    }
+
     //public class UploadedImages
     //{
     //    public const string RaffleBathroom = $"\\UploadImages\\RaffleBathroom.jfif";

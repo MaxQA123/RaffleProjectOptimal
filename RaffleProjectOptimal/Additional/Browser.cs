@@ -29,7 +29,7 @@ namespace RaffleProjectOptimal.Additional
         }
         public static void Initialize()
         {
-            AllureConfigFilesHelper.CopyJsonConfigFile();
+            //AllureConfigFilesHelper.CopyJsonConfigFile();
             new DriverManager().SetUpDriver(new ChromeConfig());
             _webDriver = new ChromeDriver();
             _Driver.Manage().Cookies.DeleteAllCookies();
@@ -41,7 +41,7 @@ namespace RaffleProjectOptimal.Additional
 
         public static string RootPath()
         {
-            string mainpath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\"));
+            string mainpath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
             return mainpath;
         }
         public static ISearchContext Driver { get { return _webDriver; } }

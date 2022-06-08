@@ -40,6 +40,10 @@ namespace RaffleAdminSite.Tests
                 .OpenFixedOddsPage();
             Pages.CmsFixedOddsPage
                 .ClickLinkCreateFixed();
+            //Pages.CmsFixedOddsPage
+            //    .ClickUplodImages();
+            Pages.CmsFixedOddsPage
+                .UploadImages();
             Thread.Sleep(5000);
         }
 
