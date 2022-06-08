@@ -20,14 +20,6 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
             return this;
         }
-
-    //public CmsFixedOddsPage ClickUplodImages()
-    //    {
-    //        WaitUntil.ShouldLocate(By.XPath("//p[@class = 'base-color add-image-title']"));
-    //        DesktopUploadImagesInput.Click();
-
-    //        return this;
-    //    }
         public CmsFixedOddsPage UploadImages()
         {
             WaitUntil.WaitSomeInterval(5);
@@ -36,6 +28,26 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
             return this;
         }
+        public CmsFixedOddsPage EnterTitleFixed()
+        {
+            WaitUntil.ShouldLocate(By.XPath("//input[@id = 'title']"));
+            TitleFieldInputFixed.SendKeys(RandomGenerateData.RandomStringTitle(10));
 
+            return this;
+        }
+        public CmsFixedOddsPage EnterSubtitle()
+        {
+            WaitUntil.ShouldLocate(By.XPath("//input[@id = 'subtitle']"));
+            SubtitleFieldInputFixed.SendKeys(RandomGenerateData.RandomStringSubTitle(20));
+
+            return this;
+        }
+        public CmsFixedOddsPage EnterDescription()
+        {
+            WaitUntil.ShouldLocate(By.XPath("//div[@class = 'ql-editor ql-blank']"));
+            AddDescriptionInputFieldFixed.SendKeys(RandomGenerateData.RandomStringDescription(100));
+
+            return this;
+        }
     }
 }
