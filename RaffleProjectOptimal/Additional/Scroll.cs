@@ -9,13 +9,13 @@ namespace RaffleProjectOptimal.Additional
 {
     public class Scroll
     {
-        public static IWebElement ScrollBottom(IWebElement element)
+        public static IWebElement ScrollToElement(IWebElement element)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Browser._Driver;
             js.ExecuteScript("arguments[0].scrollIntoView();", element);
 
             return element;
         }
-
+  
     }
 }

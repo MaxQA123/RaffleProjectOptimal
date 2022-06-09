@@ -26,7 +26,7 @@ namespace RaffleProjectOptimal.PageObjects.CheckoutPage
 
         public Checkout ScrollToCheckBoxIAmCheckout()
         {
-            Scroll.ScrollBottom(CheckBoxIAmCheckout);
+            Scroll.ScrollToElement(CheckBoxIAmCheckout);
 
             return this;
         }

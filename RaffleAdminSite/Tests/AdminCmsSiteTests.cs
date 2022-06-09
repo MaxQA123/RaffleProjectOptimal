@@ -49,9 +49,27 @@ namespace RaffleAdminSite.Tests
             Pages.CmsFixedOddsPage
                 .EnterDescription();
             Pages.CmsFixedOddsPage
+                .EnterMetaTitleFixed();
+            Pages.CmsFixedOddsPage
+                .EnterMetaDescription();
+            Pages.CmsFixedOddsPage
                 .SwitchingButtonActive();
             Pages.CmsFixedOddsPage
                 .SetStartDate();
+            Pages.CmsFixedOddsPage
+                .SetFinishDate();
+            Pages.CmsFixedOddsPage
+                .ClickSaveButtonTcktsDscnt();
+            //Pages.CmsFixedOddsPage
+            //    .ScrollToTabDiscountTickets();
+            Pages.CmsFixedOddsPage
+                .ClickTabDiscountTickets();
+            Pages.CmsFixedOddsPage
+                .EnterDataPriceNumberTickets();
+            Pages.CmsFixedOddsPage
+                .ClickSaveButtonTcktsDscnt();
+            //Pages.CmsFixedOddsPage
+            //    .SwitchDiscountTickets();
             Thread.Sleep(5000);
         }
 

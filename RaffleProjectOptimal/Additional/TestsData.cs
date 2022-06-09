@@ -18,6 +18,7 @@ namespace RaffleProjectOptimal.Additional
 
         public const string CmsLogInPage = "https://admin-staging.rafflehouse.com/#/login";
     }
+
     public class Credentials
     {
         public const string email = ("maxqatesting390@gmail.com");
@@ -28,11 +29,17 @@ namespace RaffleProjectOptimal.Additional
         public const string cmsemail = ("bennospencer@gmail.com");
         public const string cmspassword = ("1289Raffle@!CMS");
     }
+
     public class UploadedImages
     {
         public const string DhRaffleHouse = $"\\UploadImages\\DhRaffleHouse.jpg";
     }
 
+
+    public class AddingText
+    {
+        public const string metadescription = ("description");
+    }
     //public class UploadedImages
     //{
     //    public const string RaffleBathroom = $"\\UploadImages\\RaffleBathroom.jfif";

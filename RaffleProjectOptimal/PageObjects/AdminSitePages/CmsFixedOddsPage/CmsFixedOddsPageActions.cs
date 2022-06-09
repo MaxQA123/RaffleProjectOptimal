@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
@@ -22,6 +23,7 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
             return this;
         }
+
         public CmsFixedOddsPage UploadImages()
         {
             WaitUntil.WaitSomeInterval(5);
@@ -30,27 +32,50 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
             return this;
         }
+
         public CmsFixedOddsPage EnterTitleFixed()
         {
             WaitUntil.ShouldLocate(By.XPath("//input[@id = 'title']"));
-            TitleFieldInputFixed.SendKeys(RandomGenerateData.RandomStringTitle(10));
+            TitleFieldInputFixed.SendKeys("House from Dream");
 
             return this;
         }
+
         public CmsFixedOddsPage EnterSubtitle()
         {
             WaitUntil.ShouldLocate(By.XPath("//input[@id = 'subtitle']"));
-            SubtitleFieldInputFixed.SendKeys(RandomGenerateData.RandomStringSubTitle(20));
+            SubtitleFieldInputFixed.SendKeys("Address: ");
+            SubtitleFieldInputFixed.SendKeys(Address.StreetAddress());
 
             return this;
         }
+
+        public CmsFixedOddsPage EnterMetaTitleFixed()
+        {
+            WaitUntil.ShouldLocate(By.XPath("//input[@id = 'metaTitle']"));
+            MetaTitleFieldInputFixed.SendKeys(TitleFieldInputFixed.GetAttribute("value"));
+
+            return this;
+        }
+
+        public CmsFixedOddsPage EnterMetaDescription()
+        {
+            WaitUntil.ShouldLocate(By.XPath("//input[@id = 'metaDescription']"));
+            MetaDescriptionInputFixed.SendKeys(AddingText.metadescription);
+            MetaDescriptionInputFixed.SendKeys(SubtitleFieldInputFixed.GetAttribute("value"));
+
+            return this;
+        }
+
         public CmsFixedOddsPage EnterDescription()
         {
-            WaitUntil.ShouldLocate(By.XPath("//div[@class = 'ql-editor ql-blank']"));
-            AddDescriptionInputFieldFixed.SendKeys(RandomGenerateData.RandomStringDescription(100));
+            WaitUntil.WaitSomeInterval(2);
+            AddDescriptionInputFieldFixed.SendKeys("Descriptions about the house: ");
+            AddDescriptionInputFieldFixed.SendKeys(Lorem.Sentence());
 
             return this;
         }
+
         public CmsFixedOddsPage SwitchingButtonActive()
         {
             WaitUntil.ElementIsClicable(SwitchButtonActiveFixed, 3);
@@ -58,24 +83,84 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
             return this;
         }
+
         public CmsFixedOddsPage SetStartDate()
         {
             WaitUntil.ElementIsClicable(StartDateInputDay, 3);
-            StartDateInputDay.Clear();
-            StartDateInputDay.SendKeys("15");
-            StartDateInputMonth.Clear();
-            StartDateInputMonth.SendKeys("5");
-            StartDateInputYear.Clear();
-            StartDateInputYear.SendKeys("2022");
-            StartDateInputHour.Clear();
-            StartDateInputHour.SendKeys("30");
-            StartDateInputMinute.Clear();
-            StartDateInputMinute.SendKeys("49");
-            StartDateInputSecond.Clear();
-            StartDateInputSecond.SendKeys("17");
+            Input.InputFunction(StartDateInputDay, "12");
+            Input.InputFunction(StartDateInputMonth, "4");
+            Input.InputFunction(StartDateInputYear, "2022");
+            Input.InputFunction(StartDateInputHour, "14");
+            Input.InputFunction(StartDateInputMinute, "49");
+            Input.InputFunction(StartDateInputSecond, "33");
             SelectStartDateAmPm.SendKeys(Keys.ArrowDown);
 
             return this;
         }
+
+        public CmsFixedOddsPage SetFinishDate()
+        {
+            WaitUntil.ElementIsClicable(FinishDateInputDay, 3);
+            Input.InputFunction(FinishDateInputDay, "19");
+            Input.InputFunction(FinishDateInputMonth, "11");
+            Input.InputFunction(FinishDateInputYear, "2023");
+            Input.InputFunction(FinishDateInputHour, "13");
+            Input.InputFunction(FinishDateInputMinute, "40");
+            Input.InputFunction(FinishDateInputSecond, "33");
+            SelectFinishDateAmPm.SendKeys(Keys.ArrowDown);
+
+            return this;
+        }
+
+        //public CmsFixedOddsPage ScrollToTabDiscountTickets()
+        //{
+        //    Scroll.ScrollToElement(TabButtonDiscountTicketsFixed);
+        //    //WaitUntil.WaitSomeInterval(3);
+        //    Thread.Sleep(5000);
+
+
+        //    return this;
+        //}
+
+        public CmsFixedOddsPage ClickTabDiscountTickets()
+        {
+            WaitUntil.ElementIsClicable(TabButtonDiscountTicketsFixed);
+            TabButtonDiscountTicketsFixed.SendKeys("");
+            WaitUntil.WaitSomeInterval(3);
+            TabButtonDiscountTicketsFixed.Click();
+
+            return this;
+        }
+
+        #region Tab DiscountTickets
+
+        public CmsFixedOddsPage EnterDataPriceNumberTickets()
+        {
+            WaitUntil.ElementIsClicable(TicketPriceInputField, 3);
+            TicketPriceInputField.SendKeys("1.2");
+            DefaultNumberTicketsInputField.SendKeys("19");
+            NumberTicketsInputField.SendKeys("1873");
+
+            return this;
+        }
+
+        //public CmsFixedOddsPage SwitchDiscountTickets()
+        //{
+        //    WaitUntil.ElementIsClicable(TicketsBlockDiscountTogglin);
+        //    TicketsBlockDiscountTogglin.Click();
+
+        //    return this;
+        //}
+
+        public CmsFixedOddsPage ClickSaveButtonTcktsDscnt()
+        {
+            WaitUntil.ElementIsClicable(SaveButtonTabTcktsDscnt);
+            SaveButtonTabTcktsDscnt.Click();
+
+            return this;
+        }
+
+        #endregion
+
     }
 }
