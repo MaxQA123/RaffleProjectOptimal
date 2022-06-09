@@ -66,10 +66,10 @@ namespace RaffleAdminSite.Tests
                 .ClickTabDiscountTickets();
             Pages.CmsFixedOddsPage
                 .EnterDataPriceNumberTickets();
-            Pages.CmsFixedOddsPage
-                .ClickSaveButtonTcktsDscnt();
             //Pages.CmsFixedOddsPage
             //    .SwitchDiscountTickets();
+            Pages.CmsFixedOddsPage
+                .ClickSaveButtonTcktsDscnt();
             Thread.Sleep(5000);
         }
 

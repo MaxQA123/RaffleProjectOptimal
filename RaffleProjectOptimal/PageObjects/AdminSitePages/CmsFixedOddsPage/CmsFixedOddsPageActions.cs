@@ -147,6 +147,8 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
         //public CmsFixedOddsPage SwitchDiscountTickets()
         //{
         //    WaitUntil.ElementIsClicable(TicketsBlockDiscountTogglin);
+        //    TicketsBlockDiscountTogglin.SendKeys("");
+        //    WaitUntil.WaitSomeInterval(2);
         //    TicketsBlockDiscountTogglin.Click();
 
         //    return this;

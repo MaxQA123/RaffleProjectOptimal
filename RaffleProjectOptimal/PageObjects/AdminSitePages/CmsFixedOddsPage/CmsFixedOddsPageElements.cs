@@ -112,6 +112,8 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
         public IWebElement NumberTicketsInputField => Browser._Driver.FindElement(_NumberTicketsInputField);
         public readonly static By _NumberTicketsInputField = By.XPath("//input[@id = 'maxTickets']");
 
+        //label[@class = 'MuiFormControlLabel-root']//input[@id = 'isActiveDiscount']
+        //input[@id = 'isActiveDiscount']
         public IWebElement TicketsBlockDiscountTogglin => Browser._Driver.FindElement(_TicketsBlockDiscountToggling);
         public readonly static By _TicketsBlockDiscountToggling = By.XPath("//input[@id = 'isActiveDiscount']");
 
