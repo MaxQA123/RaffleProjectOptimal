@@ -22,5 +22,9 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
 
         public IWebElement ActualUserNameLog => Browser._Driver.FindElement(_actualUserNameLog);
         public readonly By _actualUserNameLog = By.XPath("//span[text() = 'Max']");
+
+        public IWebElement ForgotPasswordLink = Browser._Driver.FindElement(_ForgotPasswordLink);
+        public readonly static By _ForgotPasswordLink = By.XPath("//span[text() = 'Forgot password?']");
+
     }
 }

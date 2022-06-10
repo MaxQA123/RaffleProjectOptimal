@@ -23,9 +23,19 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
 
             return this;
         }
+
         public SignIn ClickSignInBtn()
         {
             SignInButton.Click();
+
+            return this;
+        }
+
+        public SignIn ClickForgotPassword()
+        {
+            WaitUntil.WaitSomeInterval(3);
+            WaitUntil.ShouldLocate(By.XPath("//span[text() = 'Forgot password?']"));
+            ForgotPasswordLink.Click();
 
             return this;
         }

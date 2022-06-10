@@ -15,6 +15,9 @@ namespace RaffleProjectOptimal.Additional
         public const string WeeklyPrizes = "https://staging.rafflehouse.com/lifestyleprizes";
         public const string FixedOdds = "https://staging.rafflehouse.com/fixedodds";
         public const string MyDetailsPage = "https://staging.rafflehouse.com/profile/user-info";
+        public const string FixedOddsPage = "https://staging.rafflehouse.com/fixedodds";
+
+        public const string ServiceXitroo = "https://xitroo.com/#highdarwin@xitroo.com";
 
         public const string CmsLogInPage = "https://admin-staging.rafflehouse.com/#/login";
     }
@@ -23,6 +26,8 @@ namespace RaffleProjectOptimal.Additional
     {
         public const string email = ("maxqatesting390@gmail.com");
         public const string password = ("Wsx987123");
+        public const string newPassword = ("Qwerty123!");
+        public const string emailFrgtPsswrd = ("highdarwin@xitroo.com");
         public const string cardNumber = ("4242424242424242");
         public const string expirationDate = ("1223");
         public const string cvv = ("100");

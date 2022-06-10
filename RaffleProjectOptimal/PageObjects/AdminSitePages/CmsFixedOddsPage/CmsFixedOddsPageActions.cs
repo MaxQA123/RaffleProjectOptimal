@@ -1,4 +1,5 @@
 ﻿using NBitcoin;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using RaffleProjectOptimal.Additional;
 using RimuTec.Faker;
@@ -162,6 +163,16 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
             return this;
         }
 
+        #endregion
+
+        #region Assertions
+
+        //public CmsFixedOddsPage VerifyIsFixedOddsCreatedSucsessfully(string title)
+        //{
+        //    string tittle = GetFixedOddsTitle();
+
+        //    Assert.AreEqual(title, )
+        //}
         #endregion
 
     }

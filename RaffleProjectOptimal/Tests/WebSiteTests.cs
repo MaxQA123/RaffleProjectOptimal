@@ -150,6 +150,28 @@ namespace RaffleProjectOptimal.Tests
                 .ClickBtnCompleteOrderChcktPg();
             Thread.Sleep(5000);
         }
+
+        [Test]
+
+        public void ForgotPassword()
+        {
+            Pages.Header
+                .OpenSignInPage();
+            Pages.SignIn
+                .ClickForgotPassword();
+            Pages.ForgotPasswordPg
+                .EnterEmailForgotPsswrd(Credentials.emailFrgtPsswrd);
+            Pages.ForgotPasswordPg
+                .ClickButtonRequest();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.ServiceXitroo);
+            Pages.EmailBox
+                .OpenNewLetterResetPassword();
+            Pages.EmailBox
+                .ClickLinkResetPassword();
+            Pages.ForgotPasswordPg
+                .EnterNewPassword(Credentials.newPassword);
+            Thread.Sleep(10000);
+        }
    
     }
 }

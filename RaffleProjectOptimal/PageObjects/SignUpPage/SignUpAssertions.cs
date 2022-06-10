@@ -23,9 +23,10 @@ namespace RaffleProjectOptimal.PageObjects.SignUpPage
             WaitUntil.VisibilityOfAllElementsLocatedBy(By.XPath("//h1[text() = 'My Details']"));
             string emailFld = EmailInputField.GetAttribute("value");
 
-            Assert.AreEqual(emailFld, emailFld);
+            Assert.AreEqual(email, emailFld);
 
             return this;
         }
+
     }
 }

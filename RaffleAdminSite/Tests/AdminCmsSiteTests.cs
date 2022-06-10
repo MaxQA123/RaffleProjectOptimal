@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using RaffleProjectOptimal.Additional;
+using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage;
 using RaffleProjectOptimal.PageObjects.SignInPage;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace RaffleAdminSite.Tests
                 .OpenProfile();
             Pages.CmsPersonalDetailsPage
                 .VerifyCmsIsSignIn();
+            Browser._Driver.Navigate().GoToUrl(EndPoints.FixedOddsPage);
             Thread.Sleep(5000);
         }
 
@@ -68,8 +70,11 @@ namespace RaffleAdminSite.Tests
                 .EnterDataPriceNumberTickets();
             //Pages.CmsFixedOddsPage
             //    .SwitchDiscountTickets();
+            string titlefixedodds = CmsFixedOddsPage.GetTitle();
             Pages.CmsFixedOddsPage
                 .ClickSaveButtonTcktsDscnt();
+            Pages.CmsFixedOddsPage
+                .VerifyIsFixedOddsCreatedSucsessfully(titlefixedodds);
             Thread.Sleep(5000);
         }
 

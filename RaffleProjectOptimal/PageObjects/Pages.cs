@@ -21,6 +21,8 @@ using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsSideBar;
 using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsPersonalDetailsPage;
 using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsHeader;
 using RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage;
+using RaffleProjectOptimal.PageObjects.ForgotPasswordPage;
+using RaffleProjectOptimal.PageObjects.EmailBoxPage;
 
 namespace RaffleProjectOptimal.PageObjects.SignInPage
 {
@@ -49,5 +51,7 @@ namespace RaffleProjectOptimal.PageObjects.SignInPage
         public static CmsPersonalDetailsPage CmsPersonalDetailsPage => GetPage<CmsPersonalDetailsPage>();
         public static CmsHeader CmsHeader => GetPage<CmsHeader>();
         public static CmsFixedOddsPage CmsFixedOddsPage => GetPage<CmsFixedOddsPage>();
+        public static ForgotPasswordPg ForgotPasswordPg => GetPage<ForgotPasswordPg>();
+        public static EmailBox EmailBox => GetPage<EmailBox>();
     }
 }
