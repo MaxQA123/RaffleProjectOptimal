@@ -16,16 +16,20 @@ namespace RaffleProjectOptimal.PageObjects.ForgotPasswordPage
         public IWebElement ButtonRequestFrgtPsswrd => Browser._Driver.FindElement(_ButtonRequestFrgtPsswrd);
         public readonly static By _ButtonRequestFrgtPsswrd = By.XPath("//button[@class = 'rafflebtn full-width primary requestForgot']");
 
-        //div[@class = 'MuiFormControl-root MuiTextField-root raffle-input']//input[@name = 'password']
-        public IWebElement FieldNewPasswordInputFrgtPsswrd => Browser._Driver.FindElement(_FieldNewPasswordInputFrgtPsswrd);
-        public readonly static By _FieldNewPasswordInputFrgtPsswrd = By.XPath("//div[@class = 'MuiFormControl-root MuiTextField-root raffle-input']//input[@name = 'password']");
+        #region ForgotPasswordPageForEnterNewPassword
 
-        //div[@class = 'MuiFormControl-root MuiTextField-root raffle-input']//input[@name = 'confirmPassword']
+        public IWebElement IframeSetNewPasswordPag => Browser._Driver.FindElement(_IframeSetNewPasswordPage);
+        public readonly static By _IframeSetNewPasswordPage = By.XPath("//div[@class = 'forgot-container-inner']");
+
+        public IWebElement FieldNewPasswordInputFrgtPsswrd => Browser._Driver.FindElement(_FieldNewPasswordInputFrgtPsswrd);
+        public readonly static By _FieldNewPasswordInputFrgtPsswrd = By.XPath("//div[@class = 'forgot-container-inner']//input[1]");
+
         public IWebElement FieldRepeatPsswrdInputFrgtPsswrd => Browser._Driver.FindElement(_FieldRepeatPsswrdInputFrgtPsswrd);
-        public readonly static By _FieldRepeatPsswrdInputFrgtPsswrd = By.XPath("//div[@class = 'MuiFormControl-root MuiTextField-root raffle-input']//input[@name = 'confirmPassword']");
+        public readonly static By _FieldRepeatPsswrdInputFrgtPsswrd = By.XPath("//input[@name ='confirmPassword']");
 
         public IWebElement ButtonSetNemPsswrdFrgtPsswrd => Browser._Driver.FindElement(_ButtonSetNemPsswrdFrgtPsswrd);
         public readonly static By _ButtonSetNemPsswrdFrgtPsswrd = By.XPath("//button[text() = 'Set new password']");
 
+        #endregion
     }
 }

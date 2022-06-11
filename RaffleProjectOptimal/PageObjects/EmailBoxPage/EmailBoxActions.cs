@@ -21,10 +21,14 @@ namespace RaffleProjectOptimal.PageObjects.EmailBoxPage
         public EmailBox ClickLinkResetPassword()
         {
             WaitUntil.WaitSomeInterval(5);
-            Browser._Driver.SwitchTo().Frame(Iframe);
+            Browser._Driver.SwitchTo().Frame(IframeXitrooLetter);
             WaitUntil.WaitSomeInterval(2);
             LinkResetPasswordXtroo.Click();
-            Browser._Driver.SwitchTo().DefaultContent();
+            WaitUntil.WaitSomeInterval(1);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[0]);
+            Browser._Driver.Close();
+            Browser._Driver.SwitchTo().Window(tabsList[1]);
 
             return this;
         }

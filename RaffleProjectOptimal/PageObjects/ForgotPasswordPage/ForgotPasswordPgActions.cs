@@ -31,12 +31,11 @@ namespace RaffleProjectOptimal.PageObjects.ForgotPasswordPage
 
         public ForgotPasswordPg EnterNewPassword(string newPassword)
         {
-            WaitUntil.WaitSomeInterval(2);
-            Browser._Driver.SwitchTo().DefaultContent();
-            WaitUntil.WaitSomeInterval(2);
             WaitUntil.ElementIsClicable(FieldNewPasswordInputFrgtPsswrd);
             FieldNewPasswordInputFrgtPsswrd.SendKeys(newPassword);
+            WaitUntil.WaitSomeInterval(3);
             FieldRepeatPsswrdInputFrgtPsswrd.SendKeys(newPassword);
+            ButtonSetNemPsswrdFrgtPsswrd.Click();
 
             return this;
         }
