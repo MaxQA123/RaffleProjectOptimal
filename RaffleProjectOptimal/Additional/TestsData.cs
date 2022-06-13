@@ -52,4 +52,5 @@ namespace RaffleProjectOptimal.Additional
     //    public const string RaffleFloorPlan = $"\\UploadImages\\RaffleFloorPlan.jpg";
     //    public const string RaffleOutspace = $"\\UploadImages\\RaffleOutspace.jfif";
     //}
+
 }

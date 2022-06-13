@@ -32,8 +32,6 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
         public IWebElement MetaDescriptionInputFixed => Browser._Driver.FindElement(_MetaDescriptionInputFixed);
         public readonly static By _MetaDescriptionInputFixed = By.XPath("//input[@id = 'metaDescription']");
 
-        //div[@class = 'ql-editor ql-blank']
-        //div[@class = 'ql-container ql-snow']//div[1]
         public IWebElement AddDescriptionInputFieldFixed => Browser._Driver.FindElement(_AddDescriptionInputFieldFixed);
         public readonly static By _AddDescriptionInputFieldFixed = By.XPath("//div[@class = 'ql-container ql-snow']//div[1]");
 

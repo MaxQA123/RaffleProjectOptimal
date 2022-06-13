@@ -170,7 +170,9 @@ namespace RaffleProjectOptimal.Tests
                 .ClickLinkResetPassword();
             Pages.ForgotPasswordPg
                 .EnterNewPassword(Credentials.newPassword);
-            Thread.Sleep(10000);
+            Pages.ForgotPasswordPg
+                .ClickButtonBackToHomePage();
+            Thread.Sleep(5000);
         }
    
     }

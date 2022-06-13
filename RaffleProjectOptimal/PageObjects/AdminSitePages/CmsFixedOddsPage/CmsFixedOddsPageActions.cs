@@ -113,16 +113,6 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
             return this;
         }
 
-        //public CmsFixedOddsPage ScrollToTabDiscountTickets()
-        //{
-        //    Scroll.ScrollToElement(TabButtonDiscountTicketsFixed);
-        //    //WaitUntil.WaitSomeInterval(3);
-        //    Thread.Sleep(5000);
-
-
-        //    return this;
-        //}
-
         public CmsFixedOddsPage ClickTabDiscountTickets()
         {
             WaitUntil.ElementIsClicable(TabButtonDiscountTicketsFixed);
@@ -165,15 +155,9 @@ namespace RaffleProjectOptimal.PageObjects.AdminSitePages.CmsFixedOddsPage
 
         #endregion
 
-        #region Assertions
 
-        //public CmsFixedOddsPage VerifyIsFixedOddsCreatedSucsessfully(string title)
-        //{
-        //    string tittle = GetFixedOddsTitle();
 
-        //    Assert.AreEqual(title, )
-        //}
-        #endregion
+
 
     }
 }

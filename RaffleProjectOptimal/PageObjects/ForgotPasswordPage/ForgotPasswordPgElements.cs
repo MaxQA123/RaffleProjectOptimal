@@ -30,6 +30,9 @@ namespace RaffleProjectOptimal.PageObjects.ForgotPasswordPage
         public IWebElement ButtonSetNemPsswrdFrgtPsswrd => Browser._Driver.FindElement(_ButtonSetNemPsswrdFrgtPsswrd);
         public readonly static By _ButtonSetNemPsswrdFrgtPsswrd = By.XPath("//button[text() = 'Set new password']");
 
+        public IWebElement ButtonBackToHomePage => Browser._Driver.FindElement(_ButtonBackToHomePage);
+        public readonly static By _ButtonBackToHomePage = By.XPath("//button[text() = 'Back to home page']");
+
         #endregion
     }
 }

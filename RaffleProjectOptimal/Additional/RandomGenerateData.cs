@@ -52,5 +52,6 @@ namespace RaffleProjectOptimal.Additional
             return new string(Enumerable.Repeat(chars, size)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+
     }
 }

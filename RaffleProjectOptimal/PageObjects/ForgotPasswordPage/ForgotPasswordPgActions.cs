@@ -24,7 +24,6 @@ namespace RaffleProjectOptimal.PageObjects.ForgotPasswordPage
         {
             WaitUntil.ShouldLocate(By.XPath("//button[@class = 'rafflebtn full-width primary requestForgot']"));
             ButtonRequestFrgtPsswrd.Click();
-            //Thread.Sleep(2000);
 
             return this;
         }
@@ -36,6 +35,18 @@ namespace RaffleProjectOptimal.PageObjects.ForgotPasswordPage
             WaitUntil.WaitSomeInterval(3);
             FieldRepeatPsswrdInputFrgtPsswrd.SendKeys(newPassword);
             ButtonSetNemPsswrdFrgtPsswrd.Click();
+
+            return this;
+        }
+
+        public ForgotPasswordPg ClickButtonBackToHomePage()
+        {
+            WaitUntil.WaitSomeInterval(3);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[0]);
+            WaitUntil.WaitSomeInterval(2);
+            WaitUntil.ElementIsClicable(ButtonBackToHomePage);
+            ButtonBackToHomePage.Click();
 
             return this;
         }
